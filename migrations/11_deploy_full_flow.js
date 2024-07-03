@@ -3,6 +3,7 @@ const PredictionMarketV3Manager = artifacts.require("PredictionMarketV3Manager")
 const ERC20PresetMinterPauser = artifacts.require("ERC20PresetMinterPauser");
 const RealityETH_ERC20_v3_0 = artifacts.require("RealityETH_ERC20_v3_0");
 const FantasyERC20 = artifacts.require("FantasyERC20");
+const WETH9 = artifacts.require("WETH9");
 
 let {
   TOKEN,
@@ -32,6 +33,8 @@ module.exports = async function(deployer) {
   await realitio.setToken(TOKEN);
   REALITIO_ADDRESS = realitio.address;
 
+  WETH = WETH || (await WETH9.deployed()).address;
+  
   let PM3;
   // Comment block if you want to use existing PM3
   await deployer.deploy(
