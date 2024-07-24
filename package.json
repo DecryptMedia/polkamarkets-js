@@ -31,6 +31,7 @@
         "@openzeppelin/truffle-upgrades": "^1.7.0",
         "@particle-network/aa": "^1.2.0",
         "@reality.eth/reality-eth-lib": "^3.2.10",
+        "@thirdweb-dev/contracts": "^3.15.0",
         "@web3auth/ethereum-provider": "^6.1.7",
         "@web3auth/metamask-adapter": "^6.1.7",
         "@web3auth/mpc-core-kit": "^0.3.1",
